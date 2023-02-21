@@ -150,8 +150,10 @@ public class MSEGaussianFlow implements PlugIn, KeyListener
 	
 	final static private int colorVector( float xs, float ys )
 	{
+	/**
 		xs /= maxDistance;
 		ys /= maxDistance;
+		**/
 		final double a = Math.sqrt( xs * xs + ys * ys );
 		if ( a == 0.0 ) return 0;
 		
