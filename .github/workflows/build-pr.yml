@@ -23,7 +23,7 @@ jobs:
       - name: Execute the build
         run: .github/build.sh
       - run: mkdir staging && cp target/*.jar staging
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v2
         with:
          name: Package
          path: staging
