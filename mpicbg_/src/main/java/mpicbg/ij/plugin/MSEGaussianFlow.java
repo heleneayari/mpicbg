@@ -105,8 +105,11 @@ public class MSEGaussianFlow implements PlugIn, KeyListener
 		final int n = ipXPixels.length;
 		for ( int i = 0; i < n; ++i )
 		{
-			final double x = ipXPixels[ i ] / max;
+		/**	final double x = ipXPixels[ i ] / max;
 			final double y = ipYPixels[ i ] / max;
+			*/
+			final double x = ipXPixels[ i ] ;
+			final double y = ipYPixels[ i ] ;	
 			
 			final double r = Math.sqrt( x * x + y * y );
 			final double phi = Math.atan2( x / r, y / r );
