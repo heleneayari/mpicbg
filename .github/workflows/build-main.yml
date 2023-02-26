@@ -33,8 +33,8 @@ jobs:
           MAVEN_PASS: ${{ secrets.MAVEN_PASS }}
           OSSRH_PASS: ${{ secrets.OSSRH_PASS }}
           SIGNING_ASC: ${{ secrets.SIGNING_ASC }}
-      - run: ls /home/runner/work/mpicbg/mpicbg/mpicbg_/target
-      - run: mkdir staging && cp .m2/repository/mpicbg/mpicbg/1.5.1-SNAPSHOT/*.jar staging
+      - run: ls /home/runner/work/mpicbg/mpicbg/target
+      - run: mkdir staging && cp /home/runner/work/mpicbg/mpicbg/target/*.jar staging
       - uses: actions/upload-artifact@v2
         with:
           name: Package
